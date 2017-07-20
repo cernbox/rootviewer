@@ -150,12 +150,12 @@
 		if(isPublicPage()) {
 			return onViewPublic(filename, data, getSharingToken());
 		}
-		var url = OC.generateUrl('/apps/rootviewer/load') + "?filename=" + encodeURIComponent(filename);
+		var url = OC.generateUrl('/apps/rootviewer/load') + "?filename=" + encodeURIComponent(data.dir + '/' + filename);
 		setUpEditor(url);
 	};
 
 	var onViewPublic = function(filename, data, token) {
-		url = OC.generateUrl('/apps/rootviewer/publicload') + "?filename=" + encodeURIComponent(filename) + "&token=" + token;
+		url = OC.generateUrl('/apps/rootviewer/publicload') + "?filename=" + encodeURIComponent(data.dir + '/' + filename) + "&token=" + token;
 		setUpEditor(url);
 	};
 
