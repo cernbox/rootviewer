@@ -2,7 +2,7 @@
 <info>
     <id>rootviewer</id>
     <name>Root Viewer</name>
-    <description>My first ownCloud app</description>
+    <description>Viewer for ROOT files</description>
     <licence>AGPL</licence>
     <author>Hugo Gonzalez Labrador (CERN)</author>
     <version>0.0.1</version>
