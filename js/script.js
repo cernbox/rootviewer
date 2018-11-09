@@ -160,7 +160,7 @@
 	};
 
 	var onViewPublicSingleFile = function(token) {
-		url = OC.generateUrl('/apps/rootviewer/publicload') + "?filename=" + encodeURIComponent(filename) + "&token=" + token;
+		url = OC.generateUrl('/apps/rootviewer/publicload') + "?token=" + token;
 		setUpEditor(url);
 	};
 
@@ -174,7 +174,7 @@
 		}
 		// Doesn't work with IE below 9
 		if(!$.browser.msie || ($.browser.msie && $.browser.version >= 9)){
-			if ($('#isPublic').val() && $('#mimetype').val() === 'application/root' && $("input#passwordProtected").val() === "false") {
+			if ($('#isPublic').val() && $('#mimetype').val() === 'application/root') {
 				var sharingToken = $('#sharingToken').val();
 				onViewPublicSingleFile(sharingToken);
 			}

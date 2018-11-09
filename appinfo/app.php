@@ -32,4 +32,10 @@ $container = $app->getContainer();
 \OCP\Util::addscript('rootviewer', 'scripts/JSRootPainter.min');
 \OCP\Util::addscript('rootviewer', 'scripts/JSRootInterface.min');
 \OCP\Util::addscript('rootviewer', 'scripts/JSRootPainter.jquery.min');
+/*
 \OCP\Util::addscript('rootviewer', 'scripts/JSRootIOEvolution.min');
+ */
+
+$policy = new \OCP\AppFramework\Http\EmptyContentSecurityPolicy();
+$policy->allowInlineScript(true);
+\OC::$server->getContentSecurityPolicyManager()->addDefaultPolicy($policy);
