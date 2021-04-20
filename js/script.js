@@ -92,11 +92,11 @@
 		var resetButton = $("#simpleGUI input[value='Reset']");
 		var buttonGroup = loadButton.parent();
 		var form = $("simpleGUI form");
-		var banner = "<p style='position:absolute; bottom: 0px;font-size:10px;'>This viewer is based on the <a href='http://root.cern.ch'><b>ROOT</b></a> data analysis framework developed at CERN.<br/> If you have questions or issues please refer to <a href='https://root.cern.ch/drupal/content/support'><b>ROOT Support page</b></a><br/>Integration done by <a href='https://cernbox.cern.ch'><b>CERNBOX</b></a> team</p>";
+		//var banner = "<p style='position:absolute; bottom: 0px;font-size:10px;'>This viewer is based on the <a href='http://root.cern.ch'><b>ROOT</b></a> data analysis framework developed at CERN.<br/> If you have questions or issues please refer to <a href='https://root.cern.ch/drupal/content/support'><b>ROOT Support page</b></a><br/>Integration done by <a href='https://cernbox.cern.ch'><b>CERNBOX</b></a> team</p>";
 		var left = $("#simpleGUI #left-div");
 		var right = $("#simpleGUI #right-div");
 
-		left.append(banner);
+		//left.append(banner);
 		loadButton.hide();
 		resetButton.hide();
 		loadButton.click();
@@ -104,7 +104,7 @@
 		$("#simpleGUI #left-div>h1").hide();
 		$("#simpleGUI #left-div>p").hide();
 		$("#simpleGUI #left-div form>p").hide();
-		left.append(banner);
+		//left.append(banner);
 		left.css({border:"0px", "background-color":"white"});
 		right.css({border:"0px", "background-color":"white"});
 
